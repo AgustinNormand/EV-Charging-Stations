@@ -1,0 +1,24 @@
+INFO:root:2023-02-04 16:38:42.242909: Worker number arranca desde 0
+INFO:root:2023-02-04 16:38:42.243172: Workers: 1, Worker Number: 0
+INFO:root:2023-02-04 16:38:42.243421: Missing to download count 1
+INFO:root:2023-02-04 16:38:42.243563: Worker interval Start: 0, Finish 1
+INFO:root:2023-02-04 16:38:42.243662: Missing_to_scrape Worker Len 1
+INFO:root:2023-02-04 16:38:42.243803: Q Len 1
+INFO:root:2023-02-04 16:38:42.243883: Worker number arranca desde 0
+INFO:root:2023-02-04 16:38:42.243957: Workers: 1, Worker Number: 0
+INFO:root:2023-02-04 16:38:42.244029: Api Keys count 7
+INFO:root:2023-02-04 16:38:42.244101: Worker interval Start: 0, Finish 7
+INFO:root:2023-02-04 16:38:42.244172: API_KEYS_worker Worker Len 7
+INFO:root:2023-02-04 16:38:42.244354: Starting worker 0, with api key qGi5Av_ucRHmQLWE7IZfBRx-utuRenX-4VkQDqCAkVLHBUmbmVjbDuTLiBj9b4XGO4ju8EE4SRa6Yyev0qGlqiJ0v4pFT-eALMc8yQ-qXHxPo_b6YfiaUVSDo2reY3Yx
+INFO:root:2023-02-04 16:38:42.244851: Worker Number 0, ID 252123, Latitude 38.0310857, Longitude -107.317536
+INFO:root:2023-02-04 16:38:42.244979: Starting worker 1, with api key sme8uoEbjINbc8QODPKbUymCg6oghxSTVbInCoWH2BDyR04npgNDhkLx6ZSwLJaLWKdCLGAvkTK0lZZSYY7OHnHXUpWymgI3vr9FJApZdYpWqWxlNO6lZpHRMWveY3Yx
+INFO:root:2023-02-04 16:38:42.245956: Starting worker 2, with api key wwUn1liDfLX_MUxQ6evOlJXgNVL9xS3C_4rMQY8yK4GqMsKCsGltiTGOlq1w4LwgoJNIapeYraD2HhwJvy9Q-O0DdsZT6f8uSJjsEjyn0uAXIhIwCBhF2iWvpmveY3Yx
+INFO:root:2023-02-04 16:38:42.246574: Starting worker 3, with api key uMenApaT3CAtYiNFjzH2b7bnMil3oO1mQUK6-y3S5NizvVZxaeBPhr9yyraDvkleyjaSQXlx5aG63fYe1VdnysLoJLuqcYiLx6prG31I3ctyirMyWSyj-3lCVmzeY3Yx
+INFO:root:2023-02-04 16:38:42.247208: Starting worker 4, with api key peF5yOMqMszsE4z8D9qNS0QcdMINN1AO7WWauqQCNvc5pEM6-rTPIzavsDWpn4aVcItrkkm5j4sJ3WB2JE-1AVNw4kaHohAXn_di5MfS_d0lCwzjSXbFenGf1mzeY3Yx
+INFO:root:2023-02-04 16:38:42.251607: Starting worker 5, with api key JQ5VwZomkp0RZ8KkJXHt0rWiOglvXfUl4lxRe9eLeZy2GurlgZ3Yiorr_xeSMDurKuEnHS5vlm-DqxWDTRkxF6thMSjxFiEShIAMQpWqvXOQ7ZYdigdPtY2OV23eY3Yx
+INFO:root:2023-02-04 16:38:42.253287: Starting worker 6, with api key foLImsRGsChpcAe5QiBhI4xTOF3lFuvphUzk8kWDb4nWy2Bv_JL1D6Fvizx1atBpyD1geOpVIRS8HViOwB22xDgbC1NJoH1CGvFgtkkU6PJUrM_Lt7aF4iqGHG7eY3Yx
+INFO:root:2023-02-04 16:38:43.936340: Worker Number 0, Total for resource 213, offset 0, Total in response 50
+INFO:root:2023-02-04 16:38:45.364410: Worker Number 0, Total for resource 213, offset 50, Total in response 50
+INFO:root:2023-02-04 16:38:46.237746: Worker Number 0, Total for resource 213, offset 100, Total in response 50
+INFO:root:2023-02-04 16:38:47.061790: Worker Number 0, Total for resource 213, offset 150, Total in response 50
+INFO:root:2023-02-04 16:38:47.763499: Worker Number 0, Total for resource 213, offset 200, Total in response 13

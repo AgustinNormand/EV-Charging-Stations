@@ -1,9 +1,10 @@
-docker build -t agustinnormand/multiple_stations:3 .
+docker build -t agustinnormand/multiple_stations:7 .
 
-docker push agustinnormand/multiple_stations:3
+docker push agustinnormand/multiple_stations:7
 
+sudo docker run -d --volume=/home/agustin/stations/results/:/usr/src/app/results --volume=/home/agustin/stations/log/:/usr/src/app/log agustinnormand/multiple_stations:7 4 0
 
-sudo docker run -d --volume=/home/agustin/stations/results/:/usr/src/app/results --volume=/home/agustin/stations/log/:/usr/src/app/log agustinnormand/multiple_stations:3 4 0
+sudo rm -r stations
 
 mkdir stations
 mkdir stations/results
