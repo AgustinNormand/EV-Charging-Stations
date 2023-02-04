@@ -83,7 +83,7 @@ yelp_categories = [
 workers = int(sys.argv[1]) #Cantidad de workers realizando peticiones
 worker_number = int(sys.argv[2]) #Numero de worker que esta ejecutando este código
 
-logging.basicConfig(filename='./log/application.log', level=logging.INFO, filemode="a", force=True)
+logging.basicConfig(filename='./log/application.log', level=logging.INFO, filemode="w", force=True)
 
 stationsIds_coordinates = {}
 with open("coordinates.csv", "r") as f:
@@ -122,16 +122,8 @@ logging.info("{}: Missing_to_scrape Worker Len {}".format(datetime.now(), len(mi
 
 tasks_queue = queue.Queue()
 
-already_scraped = os.listdir('./results')
-
-already_scraped_processed = []
-for result in already_scraped:
-    already_scraped_processed.append(int(result.split("_")[1]))
-
 for station_id in missing_to_scrape_worker:
-    station_id = station_id.replace("\"", "")
-    if int(station_id) not in already_scraped:
-        tasks_queue.put(station_id)
+    tasks_queue.put(station_id)
 
 logging.info("{}: Q Len {}".format(datetime.now(), tasks_queue.qsize()))
 
