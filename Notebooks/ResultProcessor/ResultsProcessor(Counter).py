@@ -4,7 +4,8 @@
 import os
 import gzip
 import pickle
-
+import threading
+import queue
 
 stations = {}
 with open("coordinates.csv", "r") as f:
@@ -16,9 +17,6 @@ with open("coordinates.csv", "r") as f:
             id, latitude, longitude = (line.replace("\n", "").split(","))
             stations[id] = {}
             stations[id]["coordinates"] = [latitude, longitude]
-
-import threading
-import queue
 
 class ProcessorWorker(threading.Thread):
     def __init__(self, worker_number, stations, tasks_queue):
@@ -41,9 +39,10 @@ class ProcessorWorker(threading.Thread):
                 results = pickle.load(f)
                 for result in results:
                     if result["name"] not in self.places_near_ev.keys():
-                        self.places_near_ev[result["name"]] = 0
-                    self.places_near_ev[result["name"]] += 1
-            #break #To only process one
+                        self.places_near_ev[result["name"]] = [result["location"]]
+                    else:
+                        if result["location"] not in self.places_near_ev[result["name"]]:
+                            self.places_near_ev[result["name"]].append(result["location"])
 
 NUMBER_OF_WORKERS = 100
 
@@ -66,37 +65,4 @@ for i in range(NUMBER_OF_WORKERS):
 for worker in workers:
     worker.join()
 
-
-"""
-results = os.listdir('./results')
-
-for file in results:
-    station_id = file.split("_")[1]
-    with gzip.GzipFile("./results/{}".format(file), "rb") as f:
-        processed_results = []
-        results = pickle.load(f)
-        for result in results:
-            processed_result = {}
-            processed_result["id"] = result["id"]
-            processed_result["alias"] = result["alias"]
-            processed_result["name"] = result["name"]
-            #image_url
-            #is_closed
-            processed_result["url"] = result["url"]
-            #review count
-            processed_result["categories"] = result["categories"]
-            #raiting
-            #coordinates
-            #transactions
-            #price
-            #location
-            processed_result["phone"] = result["phone"]
-            #display phone
-            processed_result["distance"] = result["distance"]
-            processed_results.append(processed_result)
-            #break
-        stations[station_id]["near_places"] = processed_results
-    #break
-
-"""
 
