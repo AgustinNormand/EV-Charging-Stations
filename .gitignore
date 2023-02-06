@@ -1,4 +1,16 @@
 Checkpoints/
+
 Notebooks/ResultProcessor/results
-Notebooks/ResultProcessor/counter_worker_results/
+
+Notebooks/ResultsProcesorCounter/results.tar.gz
+Notebooks/ResultsProcesorCounter/ResultsProcessor_Counter_Memory
+Notebooks/ResultsProcesorCounter/ResultsProcessor_Exploratory
+Notebooks/ResultsProcesorCounter/ResultsProcessorNotebook
+Notebooks/ResultsProcesorCounter/coordinates.csv
+
+Notebooks/coordinates.csv
 Code/MultipleInstances/results/
+
+Notebooks/Backup/counter_worker_results/
+Notebooks/Backup/results/
+
