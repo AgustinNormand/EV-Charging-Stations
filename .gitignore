@@ -1,2 +1,4 @@
 *.csv
-source_code/02_yelp/04_checkpoints/fifth_checkpoint/results/
+*.log
+source_code/02_yelp/04_checkpoints/
+source_code/02_yelp/05_results/
