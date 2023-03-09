@@ -19,7 +19,7 @@ def not_scraped(latitude_longitude, records):
     return True
 
 stations = {}
-with open("/home/agustin/PycharmProjects/Stations/source_code/01_coordinates/coordinates.csv", "r") as f:
+with open("../../01_coordinates/coordinates.csv", "r") as f:
     first_line = True
     for line in f.readlines():
         if first_line:
@@ -31,15 +31,15 @@ with open("/home/agustin/PycharmProjects/Stations/source_code/01_coordinates/coo
 
 places_near_ev = {}
 stations_done = 0
-results = os.listdir('/home/agustin/PycharmProjects/Stations/source_code/02_yelp/05_results')
+results = os.listdir('../../02_yelp/05_results')
 
-with open('/home/agustin/PycharmProjects/Stations/source_code/03_results_processor/03_ResultsProcessor_Counter_Memory/just_websites.csv', 'r') as file:
+with open('../03_ResultsProcessor_Counter_Memory/just_websites.csv', 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         just_websites = row
 
 for file_name in results:
-    with gzip.GzipFile("/home/agustin/PycharmProjects/Stations/source_code/02_yelp/05_results/{}".format(file_name), "rb") as f:
+    with gzip.GzipFile("../../02_yelp/05_results/{}".format(file_name), "rb") as f:
         results = pickle.load(f)
         for result in results:
             processed_name = result["name"].replace(" ", "").replace("/", "").replace(",", "")
@@ -85,5 +85,5 @@ for file_name in results:
     #    pickle.dump(places_near_ev, f)
 
 
-with gzip.GzipFile("./ResultsProcessor_Counter_Memory_Results", "wb") as f:
+with gzip.GzipFile("./ResultsProcessor_Counter_All_Info_Results", "wb") as f:
     pickle.dump(places_near_ev, f)

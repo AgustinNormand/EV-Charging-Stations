@@ -6,7 +6,7 @@ import gzip
 import pickle
 
 stations = {}
-with open("/home/agustin/PycharmProjects/Stations/source_code/01_coordinates/coordinates.csv", "r") as f:
+with open("../../01_coordinates/coordinates.csv", "r") as f:
     first_line = True
     for line in f.readlines():
         if first_line:
@@ -17,11 +17,11 @@ with open("/home/agustin/PycharmProjects/Stations/source_code/01_coordinates/coo
             stations[id]["coordinates"] = [latitude, longitude]
 
 stations_done = 0
-results = os.listdir('/home/agustin/PycharmProjects/Stations/source_code/02_yelp/05_results')
+results = os.listdir('../../02_yelp/05_results')
 
 unique_keys = []
 for file_name in results:
-    with gzip.GzipFile("/home/agustin/PycharmProjects/Stations/source_code/02_yelp/05_results/{}".format(file_name), "rb") as f:
+    with gzip.GzipFile("../../02_yelp/05_results/{}".format(file_name), "rb") as f:
         results = pickle.load(f)
         for result in results:
             for key in list(result.keys()):
